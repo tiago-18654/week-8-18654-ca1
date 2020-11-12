@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/week-8-18654-ca1.iml" filepath="$PROJECT_DIR$/week-8-18654-ca1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="week-8-18654-ca1/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/week-8-18654-ca1.iml" filepath="$PROJECT_DIR$/.idea/modules/week-8-18654-ca1.iml" group="week-8-18654-ca1" />
     </modules>
   </component>
 </project>
