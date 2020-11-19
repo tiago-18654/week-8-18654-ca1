@@ -27,6 +27,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import com.example.android.teacosy.R
 import com.example.android.teacosy.databinding.TotalFragmentBinding
+import java.lang.System.exit
+import kotlin.system.exitProcess
 
 /**
  * Fragment where the final score is shown, after the game is over
@@ -62,6 +64,7 @@ class TotalFragment : Fragment() {
         binding.deliveryFees.text = delivery.toString();
         binding.total.text = (total + delivery).toString();
         binding.playAgainButton.setOnClickListener { playAgain() }
+        binding.exitButton.setOnClickListener { exitProcess(0) }
 
         return binding.root
     }

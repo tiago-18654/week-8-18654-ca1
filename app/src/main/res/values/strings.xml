@@ -16,14 +16,10 @@
 
 <resources>
     <string name="app_name">Tea Cosy</string>
-    <string name="skip">Skip Item</string>
     <string name="shop_again">Shop Again</string>
     <string name="this_is_your_cart">This is your cart</string>
-    <string name="title_text">Shop =D !</string>
-    <string name="shop_button">Shop</string>
-    <string name="get_ready">Get ready to</string>
     <string name="add_to_the_cart">Go to the cart</string>
-    <string name="go_to_my_cart">Go to my cart</string>
+    <string name="exit">Exit</string>
     <string name="the_item_is">The item is…</string>
 
     <string name="darjelling">Darjelling : 8.50 per 100 gram bag</string>
@@ -32,8 +28,21 @@
     <string name="earl_grey">Earl Grey:  3.5 per 100 gram bag</string>
     <string name="irish_breakfast">Irish Breakfast : 2.5 per 100 gram bag</string>
 
-    <string name="teas">Total of teas: </string>
-    <string name="delivery">Delivery fees: </string>
-    <string name="total">TOTAL: </string>
-    <string name="choose_your_tea">Choose your tea... </string>
+    <string name="teas">"\Total of teas:                   €"</string>
+    <string name="delivery">"\Delivery fees:                   €" </string>
+    <string name="total">"\TOTAL:                  €"</string>
+    <string name="choose_your_tea">Choose your tea selecting the quantity on the ComboBox... </string>
+
+    <string-array name="quantity">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
 </resources>
