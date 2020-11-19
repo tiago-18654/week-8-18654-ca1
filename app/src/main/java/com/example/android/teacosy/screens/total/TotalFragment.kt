@@ -20,14 +20,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import com.example.android.teacosy.R
 import com.example.android.teacosy.databinding.TotalFragmentBinding
-import java.lang.System.exit
 import kotlin.system.exitProcess
 
 /**
@@ -39,6 +37,7 @@ class TotalFragment : Fragment() {
     private lateinit var scoreModelFactory: TotalViewModelFactory
 
     private var total :Float = 0.0F;
+    private var fee : Int = 0;
     private var delivery = 0;
 
     override fun onCreateView(
@@ -46,7 +45,8 @@ class TotalFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        scoreModelFactory = TotalViewModelFactory(TotalFragmentArgs.fromBundle(arguments!!).total)
+        scoreModelFactory = TotalViewModelFactory(TotalFragmentArgs.fromBundle(requireArguments()).total,
+                TotalFragmentArgs.fromBundle(requireArguments()).fee)
         scoreModel = ViewModelProvider(this, scoreModelFactory).get(TotalViewModel::class.java)
         // Inflate view and obtain an instance of the binding class.
         val binding: TotalFragmentBinding = DataBindingUtil.inflate(
@@ -57,10 +57,8 @@ class TotalFragment : Fragment() {
         )
 
         total = scoreModel.total;
+        delivery = scoreModel.fee.toInt();
         binding.totalText.text = total.toString()
-        if (total < 31.0){
-            delivery = 5;
-        }
         binding.deliveryFees.text = delivery.toString();
         binding.total.text = (total + delivery).toString();
         binding.playAgainButton.setOnClickListener { playAgain() }
@@ -69,8 +67,13 @@ class TotalFragment : Fragment() {
         return binding.root
     }
 
+    /**
+     * @author Tiago Rufino
+     * Method to call the tea_fragment again
+     */
     private fun playAgain(){
-        Toast.makeText(activity, "Back to the main screen", Toast.LENGTH_SHORT).show()
+        //text test fof the navigation
+        //Toast.makeText(activity, "Back to the main screen", Toast.LENGTH_SHORT).show()
         val action = TotalFragmentDirections.actionTotalDestinationToTeaDestination2()
         NavHostFragment.findNavController(this).navigate(action)
     }

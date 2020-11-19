@@ -8,32 +8,6 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="score_destination">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
-                          </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_restart">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_score_destination_to_title_destination">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="tea_destination">
                     <value>
                       <LayoutPositions>
@@ -55,18 +29,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="title_destination">
+                  <entry key="total_destination">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="277" />
-                            <option name="y" value="-133" />
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_title_to_game">
+                            <entry key="action_total_destination_to_tea_destination2">
                               <value>
                                 <LayoutPositions />
                               </value>

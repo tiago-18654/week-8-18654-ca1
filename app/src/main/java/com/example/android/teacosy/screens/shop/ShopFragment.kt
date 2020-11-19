@@ -81,10 +81,12 @@ class ShopFragment : Fragment() {
      * Set the total and sent to the next fragment (Total_fragment)
      */
     private fun payCart() {
-        Toast.makeText(activity, "Go to pay your cart", Toast.LENGTH_SHORT).show()
-        val action = ShopFragmentDirections.actionGameToScore()
+        // text test for navigation
+        //Toast.makeText(activity, "Go to pay your cart", Toast.LENGTH_SHORT).show()
+        val action = ShopFragmentDirections.actionTeaToCart();
         calculateValue();
         action.total = cartModel.total;
+        action.fee = cartModel.fee.toFloat();
         NavHostFragment.findNavController(this).navigate(action)
     }
 
@@ -98,6 +100,16 @@ class ShopFragment : Fragment() {
         cartModel.total = cartModel.total + (binding.spinnerComboLapsang.selectedItem.toString().toFloat() * 9.50f);
         cartModel.total = cartModel.total + (binding.spinnerComboEarlGrey.selectedItem.toString().toFloat() * 3.50f);
         cartModel.total = cartModel.total + (binding.spinnerComboIrishBreakfast.selectedItem.toString().toFloat() * 2.50f);
+    }
+
+    private fun feeCalculator(){
+        var totalWeight =
+                binding.spinnerComboDarjelling.selectedItem.toString().toFloat() +
+                binding.spinnerComboAssam.selectedItem.toString().toFloat()  +
+                binding.spinnerComboLapsang.selectedItem.toString().toFloat() +
+                binding.spinnerComboEarlGrey.selectedItem.toString().toFloat() +
+                binding.spinnerComboIrishBreakfast.selectedItem.toString().toFloat();
+        if (totalWeight < 5) cartModel.fee = 5;
     }
 }
 
